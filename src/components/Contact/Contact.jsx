@@ -2,7 +2,7 @@ import { IoPersonSharp } from 'react-icons/io5';
 import { MdPhone } from 'react-icons/md';
 import s from './Contact.module.css';
 
-const Contact = ({ name, number }) => {
+const Contact = ({ name, number, id, onDelete }) => {
   return (
     <>
       <div className={s.textBlock}>
@@ -15,7 +15,7 @@ const Contact = ({ name, number }) => {
           {number}
         </p>
       </div>
-      <button type="button" className={s.btn}>
+      <button type="button" className={s.btn} onClick={() => onDelete(id)}>
         Delete
       </button>
     </>
